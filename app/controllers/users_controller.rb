@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      flash[:success] = "You've registered Successfully."
+      flash[:success] ="You've registered Successfully."
       redirect_to root_path
       #if registration were done successfully
       #turn back to index page

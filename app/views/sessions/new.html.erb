@@ -2,11 +2,13 @@
 <div class="well col-md-6">
   <%= form_tag '/login' do |f| %>
   <div class="form-group">
+    <span class='glyphicon glyphicon-user'></span>
     <%= label_tag :name %>
     <br>
     <%= text_field_tag :name, params[:name], placeholder: "Username"%>
   </div>
   <div class="form-group">
+    <span class='glyphicon glyphicon-lock'></span>
     <%= label_tag :password %>
     <br>
     <%= password_field_tag :password, params[:password], placeholder: "Password"%>
