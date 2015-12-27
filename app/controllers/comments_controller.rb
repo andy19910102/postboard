@@ -11,6 +11,5 @@ class CommentsController < ApplicationController
     else
       render 'posts/show'
     end
-
   end
 end
