@@ -14,7 +14,7 @@
 </div>
 
 <% if logged_in? %>
-  <%= link_to 'Edit', edit_post_path(@post), class: "btn btn-default" %>
+  <%= link_to 'Edit Post', edit_post_path(@post), class: "btn btn-default" %>
 <% end %>
 
 <h4>All Comments:</h4>
@@ -35,7 +35,7 @@
   <h4>Leave a comment:</h4>
   <%= form_for [@post, @comment] do |f| %>
     <div class="row">
-      <%= f.text_area :content, rows: 3, class: 'col-md-4', placeholder: "在此輸入你的留言..." %>
+      <%= f.text_area :content, rows: 3, class: 'col-md-4', placeholder: "在此輸入你的留言(至少2個字元)..." %>
       <div class="col-md-2">
         <%= f.submit 'Create Comment', class: 'btn btn-primary'%>
       </div>
