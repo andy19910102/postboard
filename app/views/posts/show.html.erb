@@ -36,7 +36,7 @@
   <h4>Leave a comment:</h4>
   <%= form_for [@post, @comment] do |f| %>
     <div class="row">
-      <%= f.text_area :content, rows: 3, class: 'col-md-6', placeholder: "在此輸入你的留言(至少2個字元)..." %>
+      <%= f.text_area :content,:cols => 60, :rows => 4, class: 'col-md-6', placeholder: "在此輸入你的留言(至少2個字元)..." %>
     <div class="col-md-6">
       <%= f.submit 'Create Comment', class: 'btn btn-primary'%>
     </div>
