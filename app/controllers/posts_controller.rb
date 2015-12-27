@@ -19,6 +19,7 @@ class PostsController < ApplicationController
     @post.user = current_user
 
     if @post.save
+      flash[:success] = "You've post successfully."
       redirect_to posts_path
     else
       render :new

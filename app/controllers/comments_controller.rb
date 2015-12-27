@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
     @comment.user = current_user
     #for who make the comments
     if @comment.save
+      flash[:success] = "Your comment has been saved successfully."
       redirect_to post_path(@post)
     else
       render 'posts/show'
