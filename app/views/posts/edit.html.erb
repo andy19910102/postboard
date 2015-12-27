@@ -1,0 +1,25 @@
+
+<%= render 'shared/title', title: 'Edit Post'%>
+<div class="well col-md-4">
+  <%= form_for @post do |f| %>
+  
+    <div class="form-group">
+      <%= f.label :title %>
+      <br>
+      <%= f.text_field :title, placeholder: "Post Title" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :content %>
+      <br>
+      <%= f.text_area :content, rows: 8, placeholder: "Enter what you like to say here." %>
+    </div>
+
+  <br>
+    <%= f.submit(@post.new_record? ? 'Create Post' : 'Update Post', class: 'btn btn-primary') %>
+  <% end %>
+</div>
+
+<h4>
+  <%= link_to 'Back to Post List', posts_path %> 
+</h4>

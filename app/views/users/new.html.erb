@@ -1,0 +1,22 @@
+<h4>Register</h4>
+
+<div class="well col-md-6">
+  <%= form_for @user do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <br>
+    <%= f.text_field :name , placeholder: "Username"%>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password %>
+    <br>
+    <%= f.password_field :password, placeholder: "Password"%>
+    <p>請輸入至少5個字元以上的密碼</p>
+  </div>
+
+  <br>
+  <%= f.submit(@user.new_record? ? 'Register' : 'Update Profile', class: 'btn btn-primary') %>
+  <% end %>
+  
+</div>

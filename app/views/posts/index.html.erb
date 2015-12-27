@@ -1,0 +1,22 @@
+<%= render 'shared/title', title: 'PostBoard'%>
+ <% @posts.each do |post| %>
+<div>
+    <div class="row">
+    <div class="well col-md-6">
+      <p>
+        <h4><%= post.title %></h4>
+      </p>
+      <p>
+        <%= post.content %>
+      </p>
+      <br>
+    </div>
+    </div>
+     <div style="margin-bottom:30px;">
+      <h4>
+          <%= link_to "show this post", post_path(post)%>
+      </h4>
+    </div>
+</div>
+ <% end %>
+ 
