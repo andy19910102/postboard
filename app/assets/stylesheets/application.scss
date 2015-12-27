@@ -32,12 +32,14 @@ body {
 /* navbar */
 .navbar-default {
     background-color: #2b3657;
-    border-color: #252525;
     border-radius: 0px;
 }
 
-.navbar-default .navbar-brand,
 .navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-brand{
     color: #ffffff;
 }
 
@@ -45,6 +47,7 @@ body {
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-nav > li > a:hover {
     color: #ff8a50;
+    border-bottom: 3px solid #ff8a50;
 }
 
 .btn {
